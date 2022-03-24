@@ -18,7 +18,14 @@
   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers", "prettier"],
   "rules": {
     "camelcase": "off",
-    "prettier/prettier": "error",
+    "prettier/prettier": [
+      { "singleQuote": true, "parser": "flow" },
+      {
+        "fileInfoOptions": {
+          "withNodeModules": false
+        }
+      }
+    ],
     "import/no-unresolved": "error",
     "@typescript-eslint/naming-convention": [
       "error",
